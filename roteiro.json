@@ -1,0 +1,9 @@
+{
+  "lang": "pt",
+  "slides": [
+    {"texto": "Você sabia?", "fala": "Você sabia que dá para gerar vídeos automaticamente com o GitHub?"},
+    {"texto": "1. Um script em Python monta o vídeo", "fala": "Primeiro, um script em Python monta os slides, a narração e o vídeo final."},
+    {"texto": "2. O GitHub Actions executa", "fala": "Depois, o GitHub Actions roda o script sozinho na nuvem."},
+    {"texto": "3. Baixe o short pronto", "fala": "No final, é só baixar o vídeo pronto. Siga para mais dicas!"}
+  ]
+}
