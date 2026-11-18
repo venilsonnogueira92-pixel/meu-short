@@ -1,0 +1,32 @@
+name: Gerar short
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - roteiro.json
+      - make_short.py
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-core
+          pip install -r requirements.txt
+
+      - name: Gerar vídeo
+        run: python make_short.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: short
+          path: saida/short.mp4
